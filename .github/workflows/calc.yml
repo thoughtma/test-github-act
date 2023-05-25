@@ -18,7 +18,7 @@ jobs:
       - name: installing dependencies by mridul
         run: |
           pip install --upgrade pip
-          pip install requirements.txt
+          pip install -r requirements.txt
       - name: testing code quality and code coverage......
         run : |
           pytest
