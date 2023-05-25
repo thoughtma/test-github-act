@@ -22,5 +22,5 @@ jobs:
       - name: testing code quality and code coverage......
         run : |
           pytest
-          coverage -m run pytest
+          coverage run -m pytest
           coverage report -m
