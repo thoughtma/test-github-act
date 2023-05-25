@@ -1,9 +1,13 @@
 name: python-test-actions
+
 on:
-  push: branches:["main"]
+  push:
+    branches: ["main"]
+
 jobs:
   build1:
     runs-on: ubuntu-latest
+
     steps:
       - name: cloning source code
         use: actions/checkout@v3
@@ -14,7 +18,7 @@ jobs:
       - name: installing dependencies by mridul
         run: pip install requirements.txt
       - name: testing code quality and code coverage......
-        run: |
+        run : |
           pytest
           coverage -m run pytest
           coverage report -m
